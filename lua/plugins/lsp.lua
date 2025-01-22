@@ -13,7 +13,7 @@ return {
 	config = function()
 		require("mason").setup({})
 		require("mason-lspconfig").setup({
-			ensure_installed = { "ts_ls", "prismals", "ruff_lsp", "lua_ls" },
+			ensure_installed = { "ts_ls", "prismals", "ruff", "lua_ls", "svelte" },
 			handlers = {
 				function(server_name)
 					require("lspconfig")[server_name].setup({

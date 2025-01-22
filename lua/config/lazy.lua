@@ -18,9 +18,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
-
 -- Setup lazy.nvim
 require("lazy").setup({
 	spec = {
@@ -31,4 +28,4 @@ require("lazy").setup({
 })
 
 -- Set color scheme
-vim.cmd("colorscheme kanagawa")
+-- vim.cmd("colorscheme kanagawa")
