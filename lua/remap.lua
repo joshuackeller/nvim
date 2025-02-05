@@ -8,6 +8,8 @@ vim.keymap.set("v", "Y", '"+y')
 -- Toggle lines up and down in visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "<C-Down>", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "<C-Up>", ":m '<-2<CR>gv=gv")
 
 -- Make it easier to get back to netrw
 vim.keymap.set("n", "<leader>nr", vim.cmd.Ex)
