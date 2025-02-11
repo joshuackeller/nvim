@@ -48,36 +48,42 @@
 -- 		vim.cmd("colorscheme onedark")
 -- 	end,
 -- }
-return {
-	"rebelot/kanagawa.nvim",
-	opts = {
-		overrides = function(colors)
-			return {
-				["@lsp.typemod.variable.local"] = { link = "@variable" },
-				["@markup.link.label.tsx"] = { underline = false },
-				["@lsp.mod.readonly.typescript"] = { fg = "#7AA89F" },
-				-- ["@lsp.typemod.variable.readonly"] = { fg = colors.palette.oldWhite }, -- #C8C093
-			}
-		end,
-	},
-	init = function()
-		vim.cmd("colorscheme kanagawa")
-	end,
-}
 -- return {
--- 	"rose-pine/neovim",
--- 	name = "rose-pine",
+-- 	"rebelot/kanagawa.nvim",
+-- 	opts = {
+-- 		overrides = function(colors)
+-- 			return {
+-- 				["@lsp.typemod.variable.local"] = { link = "@variable" },
+-- 				["@markup.link.label.tsx"] = { underline = false },
+-- 				["@lsp.mod.readonly.typescript"] = { fg = "#7AA89F" },
+-- 				-- ["@lsp.typemod.variable.readonly"] = { fg = colors.palette.oldWhite }, -- #C8C093
+-- 			}
+-- 		end,
+-- 	},
 -- 	init = function()
--- 		require("rose-pine").setup({
--- 			variant = "main",
--- 			highlight_groups = {
--- 				-- Assuming the highlight group for "return" is "@keyword.return"
--- 				["@keyword.return"] = { fg = "love" },
--- 			},
--- 		})
--- 		vim.cmd("colorscheme rose-pine")
+-- 		vim.cmd("colorscheme kanagawa")
 -- 	end,
 -- }
+-- return {
+-- 	"rebelot/kanagawa.nvim",
+-- 	init = function()
+-- 		vim.cmd("colorscheme kanagawa-dragon")
+-- 	end,
+-- }
+return {
+	"rose-pine/neovim",
+	name = "rose-pine",
+	init = function()
+		require("rose-pine").setup({
+			variant = "main",
+			highlight_groups = {
+				-- Assuming the highlight group for "return" is "@keyword.return"
+				["@keyword.return"] = { fg = "love" },
+			},
+		})
+		vim.cmd("colorscheme rose-pine")
+	end,
+}
 -- return { "EdenEast/nightfox.nvim" }
 -- return {
 -- 	"AlexvZyl/nordic.nvim",
@@ -89,25 +95,30 @@ return {
 -- 	end,
 -- }
 -- return {
--- 	{
--- 		"maxmx03/dracula.nvim",
--- 		lazy = false,
--- 		priority = 1000,
--- 		config = function()
--- 			local dracula = require("dracula")
--- 			dracula.setup({})
--- 			vim.cmd.colorscheme("dracula")
--- 		end,
--- 	},
--- 	{
--- 		"nvim-lualine/lualine.nvim",
--- 		opts = {
--- 			options = {
--- 				theme = vim.g.colors_name,
--- 				refresh = {
--- 					statusline = 1000,
--- 				},
--- 			},
--- 		},
--- 	},
+-- 	"Mofiqul/dracula.nvim",
+-- 	config = function()
+-- 		local dracula = require("dracula")
+-- 		dracula.setup({
+-- 			on_colors = function()
+-- 				return {
+-- 					bg = "#212121",
+-- 					-- bg = "#1E202A",
+-- 				}
+-- 			end,
+-- 			on_highlights = function(colors)
+-- 				return {
+-- 					Normal = { bg = colors.bg },
+-- 				}
+-- 			end,
+-- 		})
+-- 		vim.cmd.colorscheme("dracula-soft")
+-- 	end,
+-- }
+-- return {
+-- 	"vague2k/vague.nvim",
+-- 	config = function()
+-- 		-- NOTE: you do not need to call setup if you don't want to.
+-- 		require("vague").setup({})
+-- 		vim.cmd.colorscheme("vague")
+-- 	end,
 -- }

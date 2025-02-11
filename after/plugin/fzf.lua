@@ -1,7 +1,0 @@
-local fzf = require("fzf-lua")
-vim.keymap.set("n", "<leader>sf", fzf.files, {})
-vim.keymap.set("n", "<leader>sg", fzf.live_grep, {})
-vim.keymap.set("n", "<leader>sb", fzf.buffers, {})
-vim.keymap.set("n", "<leader>sd", fzf.lsp_document_diagnostics, {})
-vim.keymap.set("n", "<leader>gs", fzf.git_status, {})
-vim.keymap.set("n", "<leader>gb", fzf.git_blame, {})
